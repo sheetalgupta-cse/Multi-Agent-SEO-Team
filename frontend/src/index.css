@@ -1,0 +1,1915 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
+
+/* =========================================================
+   AURIFY AI SEO TEAM
+   INDEX.CSS
+   Aurify Brand Theme + Responsive Design
+========================================================= */
+
+/* =========================================================
+   1. ROOT / BRAND COLORS
+========================================================= */
+
+:root {
+  font-family: "DM Sans", sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  /* Aurify Brand */
+  --aurify-navy: #062b5c;
+  --aurify-dark: #041d3d;
+
+  /* Aurify Orange */
+  --aurify-orange: #f97316;
+  --aurify-orange-dark: #ea580c;
+
+  /* AI Accent - use sparingly */
+  --aurify-purple: #7c5ce7;
+
+  /* Background */
+  --aurify-cream: #fffdf5;
+  --aurify-white: #ffffff;
+
+  /* Text */
+  --text-primary: #062b5c;
+  --text-dark: #172033;
+  --text-muted: #6b7280;
+  --text-light: #94a3b8;
+
+  /* Borders */
+  --border: #e5e7eb;
+  --border-dark: #273244;
+
+  /* Status */
+  --success: #22c55e;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+}
+
+/* =========================================================
+   2. GLOBAL RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+
+  background: var(--aurify-cream);
+  color: var(--text-primary);
+
+  font-family: "DM Sans", sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+input {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   3. APP
+========================================================= */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* =========================================================
+   4. SIDEBAR
+========================================================= */
+
+.sidebar {
+  width: 252px;
+  min-height: 100vh;
+
+  background: linear-gradient(
+    180deg,
+    var(--aurify-navy) 0%,
+    var(--aurify-dark) 100%
+  );
+
+  color: #ffffff;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  z-index: 50;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 24px 16px;
+
+  overflow-y: auto;
+
+  transition: transform 0.25s ease;
+
+  box-shadow: 4px 0 25px rgba(6, 43, 92, 0.15);
+}
+
+/* =========================================================
+   5. BRAND
+========================================================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 0 8px 28px;
+}
+
+.brand-logo {
+  width: 39px;
+  height: 39px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    var(--aurify-orange),
+    var(--aurify-orange-dark)
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 6px 18px rgba(249, 115, 22, 0.25);
+}
+
+.brand-name {
+  font-family: "Manrope", sans-serif;
+
+  font-weight: 800;
+  font-size: 17px;
+
+  color: #ffffff;
+}
+
+.brand-subtitle {
+  font-size: 9px;
+
+  letter-spacing: 1.4px;
+
+  color: #cbd5e1;
+
+  margin-top: 2px;
+}
+
+.mobile-close {
+  display: none;
+
+  margin-left: auto;
+
+  background: transparent;
+
+  border: 0;
+
+  color: #cbd5e1;
+}
+
+/* =========================================================
+   6. WORKSPACE
+========================================================= */
+
+.workspace-label,
+.nav-label {
+  font-size: 10px;
+
+  font-weight: 700;
+
+  color: #94a3b8;
+
+  letter-spacing: 1.3px;
+
+  padding: 0 10px 8px;
+}
+
+.workspace-box {
+  display: flex;
+
+  gap: 10px;
+
+  align-items: center;
+
+  padding: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border-radius: 12px;
+}
+
+.workspace-avatar {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 9px;
+
+  background: rgba(249, 115, 22, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+
+  color: var(--aurify-orange);
+}
+
+.workspace-box strong {
+  display: block;
+
+  font-size: 12px;
+
+  color: #ffffff;
+}
+
+.workspace-box span {
+  display: block;
+
+  font-size: 10px;
+
+  color: #94a3b8;
+
+  margin-top: 2px;
+}
+
+/* =========================================================
+   7. NAVIGATION
+========================================================= */
+
+.nav {
+  margin-top: 28px;
+}
+
+.nav-item {
+  width: 100%;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #b8c4d6;
+
+  padding: 11px 12px;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  gap: 12px;
+
+  align-items: center;
+
+  text-align: left;
+
+  font-size: 13px;
+
+  margin-bottom: 3px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-item:hover {
+  color: #ffffff;
+
+  background: rgba(249, 115, 22, 0.12);
+
+  transform: translateX(2px);
+}
+
+.nav-item.active {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    var(--aurify-orange),
+    var(--aurify-orange-dark)
+  );
+
+  box-shadow:
+    0 8px 20px rgba(249, 115, 22, 0.22);
+}
+
+.nav-item.active svg {
+  color: #ffffff;
+}
+
+.settings-label {
+  margin-top: 24px;
+}
+
+/* =========================================================
+   8. SIDEBAR BOTTOM
+========================================================= */
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.ai-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 12px;
+
+  border-radius: 12px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+
+  background: var(--success);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 4px rgba(34, 197, 94, 0.1);
+}
+
+.ai-status strong {
+  display: block;
+
+  font-size: 11px;
+
+  color: #ffffff;
+}
+
+.ai-status span {
+  display: block;
+
+  font-size: 10px;
+
+  color: #94a3b8;
+
+  margin-top: 2px;
+}
+
+.version {
+  color: #7890ad;
+
+  font-size: 9px;
+
+  text-align: center;
+
+  margin-top: 12px;
+}
+
+/* =========================================================
+   9. MAIN
+========================================================= */
+
+.main {
+  width: calc(100% - 252px);
+
+  margin-left: 252px;
+
+  min-height: 100vh;
+
+  background: var(--aurify-cream);
+}
+
+/* =========================================================
+   10. TOPBAR
+========================================================= */
+
+.topbar {
+  height: 70px;
+
+  padding: 0 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  border-bottom: 1px solid #eadfd2;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  backdrop-filter: blur(15px);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 20;
+}
+
+.topbar-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 23px;
+}
+
+.notification {
+  position: relative;
+
+  color: var(--aurify-navy);
+}
+
+.notification span {
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: var(--aurify-orange);
+
+  right: 0;
+  top: -1px;
+}
+
+.user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+.user-avatar {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 10px;
+
+  background: #fff1e8;
+
+  color: var(--aurify-orange-dark);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+.user-info strong {
+  display: block;
+
+  font-size: 12px;
+
+  color: var(--aurify-navy);
+}
+
+.user-info span {
+  display: block;
+
+  color: #8a93a4;
+
+  font-size: 10px;
+
+  margin-top: 1px;
+}
+
+.menu-button,
+.mobile-title {
+  display: none;
+}
+
+/* =========================================================
+   11. CONTENT
+========================================================= */
+
+.content {
+  max-width: 1450px;
+
+  margin: 0 auto;
+
+  padding: 38px 38px 25px;
+}
+
+/* =========================================================
+   12. HERO
+========================================================= */
+
+.hero {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 30px;
+
+  margin-bottom: 32px;
+}
+
+.hero-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+
+  color: var(--aurify-orange-dark);
+
+  background: #fff1e8;
+
+  border: 1px solid #fed7aa;
+
+  padding: 7px 10px;
+
+  border-radius: 100px;
+
+  margin-bottom: 13px;
+}
+
+.hero h1 {
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(30px, 4vw, 48px);
+
+  line-height: 1.08;
+
+  letter-spacing: -2px;
+
+  color: var(--aurify-navy);
+}
+
+.hero h1 span {
+  background: linear-gradient(
+    90deg,
+    var(--aurify-orange),
+    var(--aurify-orange-dark)
+  );
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  color: transparent;
+}
+
+.hero p {
+  max-width: 620px;
+
+  color: var(--text-muted);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  margin-top: 13px;
+}
+
+/* =========================================================
+   13. HERO DECORATION
+========================================================= */
+
+.hero-decoration {
+  width: 180px;
+
+  height: 150px;
+
+  flex-shrink: 0;
+
+  border-radius: 35px;
+
+  background: linear-gradient(
+    135deg,
+    #fff1e8,
+    #fffdf5
+  );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: var(--aurify-orange);
+
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid #fed7aa;
+}
+
+.orbit {
+  position: absolute;
+
+  border: 1px solid rgba(249, 115, 22, 0.3);
+
+  border-radius: 50%;
+}
+
+.orbit-one {
+  width: 150px;
+  height: 150px;
+}
+
+.orbit-two {
+  width: 90px;
+  height: 90px;
+}
+
+/* =========================================================
+   14. ANALYSIS BOX
+========================================================= */
+
+.analysis-box {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr auto;
+
+  gap: 14px;
+
+  align-items: end;
+
+  background: var(--aurify-white);
+
+  border: 1px solid #eadfd2;
+
+  border-radius: 16px;
+
+  padding: 18px;
+
+  box-shadow:
+    0 10px 35px rgba(6, 43, 92, 0.06);
+
+  margin-bottom: 18px;
+}
+
+.input-group {
+  min-width: 0;
+}
+
+.input-group label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: var(--aurify-navy);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 7px;
+}
+
+.input-wrapper {
+  height: 45px;
+
+  border: 1px solid #e5ded4;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 12px;
+
+  color: #94a3b8;
+
+  transition: 0.2s;
+
+  background: #ffffff;
+}
+
+.input-wrapper:focus-within {
+  border-color: var(--aurify-orange);
+
+  box-shadow:
+    0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.input-wrapper input {
+  border: 0;
+
+  outline: 0;
+
+  width: 100%;
+
+  min-width: 0;
+
+  color: var(--text-dark);
+
+  background: transparent;
+
+  font-size: 12px;
+}
+
+.input-wrapper input::placeholder {
+  color: #9ca3af;
+}
+
+/* =========================================================
+   15. ANALYZE BUTTON
+========================================================= */
+
+.analyze-button {
+  height: 45px;
+
+  border: 0;
+
+  border-radius: 10px;
+
+  padding: 0 20px;
+
+  background: linear-gradient(
+    135deg,
+    var(--aurify-orange),
+    var(--aurify-orange-dark)
+  );
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  font-weight: 700;
+
+  font-size: 12px;
+
+  box-shadow:
+    0 7px 18px rgba(249, 115, 22, 0.24);
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.analyze-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 10px 24px rgba(249, 115, 22, 0.3);
+}
+
+.analyze-button:disabled {
+  opacity: 0.7;
+
+  cursor: wait;
+}
+
+.button-loader {
+  width: 13px;
+
+  height: 13px;
+
+  border: 2px solid rgba(255, 255, 255, 0.4);
+
+  border-top-color: white;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+}
+
+/* =========================================================
+   16. CARDS
+========================================================= */
+
+.card {
+  background: var(--aurify-white);
+
+  border: 1px solid #e8e1d8;
+
+  border-radius: 16px;
+
+  padding: 20px;
+
+  box-shadow:
+    0 7px 30px rgba(6, 43, 92, 0.04);
+}
+
+.section-heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+
+  gap: 15px;
+}
+
+.eyebrow {
+  display: block;
+
+  color: #8b93a3;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.1px;
+
+  margin-bottom: 5px;
+}
+
+.section-heading h2 {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 16px;
+
+  color: var(--aurify-navy);
+}
+
+.online-pill {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 6px 9px;
+
+  border-radius: 100px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  color: #15803d;
+
+  background: #f0fdf4;
+}
+
+.online-pill span {
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: var(--success);
+}
+
+/* =========================================================
+   17. AGENTS
+========================================================= */
+
+.agent-card {
+  margin-bottom: 18px;
+}
+
+.agent-list {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 10px;
+}
+
+.agent-row {
+  border: 1px solid #e9e1d8;
+
+  border-radius: 12px;
+
+  padding: 12px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 110px;
+
+  background: #ffffff;
+}
+
+.agent-icon {
+  width: 33px;
+
+  height: 33px;
+
+  border-radius: 9px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 10px;
+}
+
+.agent-icon.completed {
+  background: #f0fdf4;
+
+  color: #16a34a;
+}
+
+.agent-icon.running {
+  background: #fff1e8;
+
+  color: var(--aurify-orange);
+}
+
+.agent-icon.waiting {
+  background: #f3f4f6;
+
+  color: #9ca3af;
+}
+
+.agent-info strong {
+  display: block;
+
+  font-size: 11px;
+
+  color: var(--aurify-navy);
+}
+
+.agent-info span {
+  display: block;
+
+  color: #8991a1;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+
+  margin-top: 4px;
+}
+
+.agent-status {
+  margin-top: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  font-size: 9px;
+
+  color: #7b8495;
+}
+
+.agent-status svg {
+  color: var(--success);
+}
+
+.agent-status .spin {
+  color: var(--aurify-orange);
+}
+
+/* =========================================================
+   18. DASHBOARD
+========================================================= */
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns: 1.25fr 1fr 1fr;
+
+  gap: 18px;
+
+  margin-bottom: 18px;
+}
+
+/* =========================================================
+   19. SCORE
+========================================================= */
+
+.score-main {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+}
+
+.score-ring {
+  position: relative;
+
+  width: 140px;
+
+  height: 140px;
+
+  flex: 0 0 140px;
+}
+
+.score-ring svg {
+  transform: rotate(-90deg);
+}
+
+.ring-bg {
+  fill: none;
+
+  stroke: #f1ece5;
+
+  stroke-width: 9;
+}
+
+.ring-progress {
+  fill: none;
+
+  stroke: var(--aurify-orange);
+
+  stroke-width: 9;
+
+  stroke-linecap: round;
+}
+
+.score-number {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.score-number strong {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 30px;
+
+  color: var(--aurify-navy);
+}
+
+.score-number span {
+  color: #9ca3af;
+
+  font-size: 10px;
+}
+
+.score-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #15803d;
+
+  background: #f0fdf4;
+
+  border-radius: 100px;
+
+  padding: 5px 8px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+.score-description p {
+  color: #737d8f;
+
+  font-size: 10px;
+
+  line-height: 1.65;
+
+  margin-top: 9px;
+}
+
+.score-breakdown {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid #eef0f3;
+
+  margin-top: 20px;
+
+  padding-top: 14px;
+}
+
+.score-breakdown div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.score-breakdown span {
+  font-size: 8px;
+
+  color: #8a93a4;
+}
+
+.score-breakdown strong {
+  font-size: 12px;
+
+  color: var(--aurify-navy);
+}
+
+.warning {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  background: #fff7ed;
+
+  color: #c2410c;
+
+  padding: 9px 10px;
+
+  border-radius: 8px;
+
+  font-size: 9px;
+
+  margin-top: 15px;
+}
+
+/* =========================================================
+   20. COMPETITORS
+========================================================= */
+
+.competitor-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.competitor {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.competitor-avatar {
+  width: 35px;
+
+  height: 35px;
+
+  border-radius: 9px;
+
+  background: #fff1e8;
+
+  color: var(--aurify-orange-dark);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+.competitor-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.competitor-info strong {
+  display: block;
+
+  font-size: 10px;
+
+  color: var(--aurify-navy);
+}
+
+.competitor-info span {
+  display: block;
+
+  color: #929aaa;
+
+  font-size: 8px;
+
+  margin-top: 3px;
+}
+
+.competitor-info b {
+  color: #5d6677;
+}
+
+/* =========================================================
+   21. AUDIT
+========================================================= */
+
+.mini-score {
+  background: #f0fdf4;
+
+  color: #15803d;
+
+  padding: 6px 9px;
+
+  border-radius: 8px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+.audit-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.audit-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.audit-item > svg.critical {
+  color: var(--danger);
+}
+
+.audit-item > svg.warning {
+  color: var(--warning);
+
+  background: transparent;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+.audit-item > svg.success {
+  color: var(--success);
+}
+
+.audit-item strong {
+  display: block;
+
+  font-size: 10px;
+
+  color: var(--aurify-navy);
+}
+
+.audit-item span {
+  display: block;
+
+  font-size: 8px;
+
+  color: #939bab;
+
+  margin-top: 3px;
+}
+
+/* =========================================================
+   22. KEYWORDS
+========================================================= */
+
+.keyword-card {
+  margin-bottom: 18px;
+}
+
+.text-button {
+  border: 0;
+
+  background: transparent;
+
+  color: var(--aurify-orange-dark);
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+
+  width: 100%;
+}
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 650px;
+}
+
+th {
+  text-align: left;
+
+  color: #7b8495;
+
+  font-size: 8px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+
+  font-weight: 800;
+
+  padding: 10px;
+
+  background: #fffaf4;
+}
+
+td {
+  padding: 13px 10px;
+
+  border-top: 1px solid #f0ece6;
+
+  font-size: 10px;
+}
+
+td strong {
+  font-size: 10px;
+
+  color: var(--aurify-navy);
+}
+
+.intent {
+  color: #5b6475;
+}
+
+.difficulty,
+.opportunity {
+  padding: 4px 7px;
+
+  border-radius: 5px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+.difficulty.high {
+  background: #fff1f2;
+
+  color: #be123c;
+}
+
+.difficulty.medium {
+  background: #fff7ed;
+
+  color: #c2410c;
+}
+
+.difficulty.low {
+  background: #f0fdf4;
+
+  color: #15803d;
+}
+
+.opportunity.very-high,
+.opportunity.high {
+  background: #f0fdf4;
+
+  color: #15803d;
+}
+
+.opportunity.medium {
+  background: #fff7ed;
+
+  color: #c2410c;
+}
+
+/* =========================================================
+   23. ACTION PLAN
+========================================================= */
+
+.action-card {
+  margin-bottom: 18px;
+}
+
+.timeline {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.timeline-item {
+  display: flex;
+
+  gap: 13px;
+
+  position: relative;
+
+  padding-bottom: 23px;
+}
+
+.timeline-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  left: 9px;
+
+  top: 21px;
+
+  bottom: 0;
+
+  width: 1px;
+
+  background: #e5ddd4;
+}
+
+.timeline-marker {
+  position: relative;
+
+  z-index: 2;
+
+  color: var(--aurify-orange);
+
+  background: white;
+}
+
+.timeline-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.action-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.action-top > span:last-child {
+  font-size: 8px;
+
+  color: #9ca3af;
+}
+
+.priority {
+  padding: 4px 7px;
+
+  border-radius: 5px;
+
+  font-size: 7px;
+
+  font-weight: 800;
+}
+
+.priority.high {
+  background: #fef2f2;
+
+  color: #dc2626;
+}
+
+.priority.medium {
+  background: #fff7ed;
+
+  color: #c2410c;
+}
+
+.timeline-content h3 {
+  font-size: 11px;
+
+  margin-top: 7px;
+
+  color: var(--aurify-navy);
+}
+
+.timeline-content p {
+  color: #858e9f;
+
+  font-size: 9px;
+
+  margin-top: 4px;
+}
+
+.generate-plan {
+  width: 100%;
+
+  border: 1px solid #fed7aa;
+
+  background: #fff7ed;
+
+  color: var(--aurify-orange-dark);
+
+  padding: 10px;
+
+  border-radius: 9px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+}
+
+/* =========================================================
+   24. FOOTER
+========================================================= */
+
+footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  color: #9ca3af;
+
+  font-size: 9px;
+
+  padding: 12px 2px;
+}
+
+/* =========================================================
+   25. ANIMATION
+========================================================= */
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   26. MOBILE OVERLAY
+========================================================= */
+
+.mobile-overlay {
+  display: none;
+}
+
+/* =========================================================
+   27. TABLET
+   851px - 1150px
+========================================================= */
+
+@media (max-width: 1150px) {
+  .agent-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .score-card {
+    grid-column: span 2;
+  }
+
+  .content {
+    padding: 32px 26px;
+  }
+}
+
+/* =========================================================
+   28. TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 850px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.sidebar-open {
+    transform: translateX(0);
+  }
+
+  .mobile-overlay {
+    display: block;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(4, 29, 61, 0.5);
+
+    backdrop-filter: blur(3px);
+
+    z-index: 40;
+  }
+
+  .mobile-close {
+    display: block;
+  }
+
+  .main {
+    width: 100%;
+
+    margin-left: 0;
+  }
+
+  .topbar {
+    justify-content: space-between;
+
+    padding: 0 18px;
+  }
+
+  .menu-button {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--aurify-navy);
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 9px;
+  }
+
+  .menu-button:hover {
+    background: #fff1e8;
+
+    color: var(--aurify-orange);
+  }
+
+  .mobile-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    color: var(--aurify-navy);
+  }
+
+  .content {
+    padding: 28px 20px;
+  }
+
+  .analysis-box {
+    grid-template-columns: 1fr;
+  }
+
+  .analyze-button {
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  .hero-decoration {
+    display: none;
+  }
+}
+
+/* =========================================================
+   29. MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .topbar {
+    height: 60px;
+  }
+
+  .topbar-right {
+    gap: 14px;
+  }
+
+  .user-info {
+    display: none;
+  }
+
+  .hero {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .hero p {
+    font-size: 12px;
+  }
+
+  .agent-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .score-card {
+    grid-column: auto;
+  }
+
+  .score-main {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .score-breakdown {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+  }
+
+  footer {
+    flex-direction: column;
+
+    gap: 5px;
+  }
+}
+
+/* =========================================================
+   30. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+  .content {
+    padding: 22px 13px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+
+    letter-spacing: -1px;
+  }
+
+  .hero-badge {
+    font-size: 8px;
+
+    letter-spacing: 0.8px;
+  }
+
+  .agent-list {
+    grid-template-columns: 1fr;
+  }
+
+  .agent-row {
+    min-height: auto;
+
+    display: grid;
+
+    grid-template-columns: 35px 1fr auto;
+
+    align-items: center;
+
+    gap: 9px;
+  }
+
+  .agent-icon {
+    margin-bottom: 0;
+  }
+
+  .agent-status {
+    margin-top: 0;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .analysis-box {
+    padding: 14px;
+
+    border-radius: 14px;
+  }
+
+  .input-wrapper {
+    height: 44px;
+  }
+
+  .analyze-button {
+    height: 44px;
+
+    font-size: 11px;
+  }
+
+  .score-ring {
+    width: 120px;
+
+    height: 120px;
+
+    flex-basis: 120px;
+  }
+
+  .score-ring svg {
+    width: 120px;
+
+    height: 120px;
+  }
+}
+
+/* =========================================================
+   31. LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+  .content {
+    padding-left: 42px;
+
+    padding-right: 42px;
+  }
+}
